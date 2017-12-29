@@ -1,5 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
+  baseUrl: 'https://www.jetblue.com',
 
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
@@ -8,7 +9,7 @@ exports.config = {
     'features/*.feature'
   ],
   cucumberOpts: {
-    require: 'features/steps/*_steps.js',
+    require: 'features/steps/*.steps.js',
     format: 'pretty'
   }
 }
